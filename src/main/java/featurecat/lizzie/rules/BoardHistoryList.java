@@ -176,6 +176,12 @@ public class BoardHistoryList extends AbstractCollection<BoardData> {
         return false;
     }
 
+  public boolean violatesKoRule(BoardData data) {
+    BoardHistoryNode previous = this.head.getPrevious();
+    // check if the current position is identical to the position two moves ago
+    return previous != null && data.getZobrist().equals(previous.getData().getZobrist());
+  }
+
     @NotNull
     @Override
     public Iterator<BoardData> iterator() {
