@@ -379,7 +379,7 @@ public class Board implements Closeable {
             BoardData newState = new BoardData(stones, lastMove, color, !history.isBlacksTurn(), zobrist, moveNumber, moveNumberList, removedStones, blackPrisonersCount, whitePrisonersCount);
 
             // don't make this coordinate if it is suicidal or violates superko
-            if (isSuicidal || history.violatesSuperko(newState))
+            if (isSuicidal || history.violatesKoRule(newState))
                 return;
 
             // update history with this coordinate
