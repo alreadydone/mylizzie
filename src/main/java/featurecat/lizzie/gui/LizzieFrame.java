@@ -360,7 +360,7 @@ public class LizzieFrame extends JFrame {
         int height = mainPanel.getHeight();
         int maxSize = Math.min(width, height);
 
-        Font font = new Font(new JLabel().getFont().getName(), Font.PLAIN, (int) (maxSize * 0.03));
+        Font font = new Font("SimSun", Font.PLAIN, (int) (maxSize * 0.03)); //jLabel font
         g.setFont(font);
         int lineHeight = (int) (font.getSize() * 1.15);
 
@@ -409,7 +409,7 @@ public class LizzieFrame extends JFrame {
         int height = mainPanel.getHeight();
         int maxSize = (int) (Math.min(width, height) * 0.98);
 
-        Font font = new Font(new JLabel().getFont().getName(), Font.PLAIN, (int) (maxSize * 0.03));
+        Font font = new Font("SimSun", Font.PLAIN, (int) (maxSize * 0.03));
         String commandString = resourceBundle.getString("LizzieFrame.controls.keyF1");
         int strokeRadius = 2;
 
