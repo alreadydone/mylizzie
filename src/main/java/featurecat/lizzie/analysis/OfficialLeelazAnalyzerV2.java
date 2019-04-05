@@ -190,6 +190,12 @@ public class OfficialLeelazAnalyzerV2 extends AbstractGtpBasedAnalyzer {
                     )
                     , Optional(
                             Spaces()
+                            , String("lcb")
+                            , Spaces()
+                            , DoubleNumber(), saveMatchToValueMap("LCB")
+                    )
+                    , Optional(
+                            Spaces()
                             , String("order")
                             , Spaces()
                             , DoubleNumber(), saveMatchToValueMap("ORDER")
